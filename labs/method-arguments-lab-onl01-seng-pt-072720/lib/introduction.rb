@@ -12,7 +12,7 @@ def introduction(name)
 
 end
 
-def introduction_with_language(language, name) # The order of arguments matters!
+def introduction_with_language(language, name) # The order of parameters matters! More specifically, we need to make sure we invoke this method passing in the arguments in the order they are defined here - otherwise, we will get unexpected results. Reverse the parameters in this method, run the tests, and see for yourself.
     puts name + "," + language
 end
 
