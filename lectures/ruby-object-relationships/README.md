@@ -12,7 +12,7 @@ _the topic or area of interest we are mimicking_
 * What is a model?
 _a class that models a real world entity and stores data about itself_
 * How can we visualize these domains?
-_Entity Relation Diagram - see `domain.draw.io` file_
+_Entity Relation Diagram - see `domain.draw.io` file or [click here](https://drive.google.com/file/d/1agk5-fn95RR4GUR-JYuSLMPW10_XCt8C/view?usp=sharing_)
 
 ### Types of Model Relationships
 * one to many
