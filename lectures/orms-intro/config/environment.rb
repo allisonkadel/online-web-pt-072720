@@ -12,6 +12,7 @@ DB = {:conn => SQLite3::Database.new('db/cats.db')}
 # Supplying 'db/cats.db' as a path will tell the Database constructor to look inside
     # the same directory as our Rakefile (our root directory) for a directory named 'db'.
     # If the 'db' directory isn't found, we will get a CantOpenException.
+DB[:conn].results_as_hash = true
 
 
 require_relative '../lib/cat'

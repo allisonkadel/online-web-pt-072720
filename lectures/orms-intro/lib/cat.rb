@@ -28,13 +28,21 @@ class Cat
         end
     end
 
-    def create(name, age, id=nil) # for next time
-        self.class.new(name, age, id)
-        save
+    def self.create(name, age, id=nil) # for next time
+        self.new(name, age, id).save
     end
 
     def self.find_or_create_by(name, age) # for next time
-
+        sql = <<-SQL
+            SELECT * FROM cats WHERE name = ? AND age = ?
+        SQL
+        cat_result = DB[:conn].execute(sql, name, age)[0]
+        binding.pry
+        if !cat_result.nil?
+            Cat.new(cat_result["name"], cat_result["age"], cat_result["id"])
+        else
+            self.create(name, age) 
+        end
     end
 
 end
