@@ -1,0 +1,19 @@
+# This file allows us to create Rake Tasks. We created a task that will load our environment
+    # and then load a Pry console, letting us play around with our database and objects.
+# The task can be run with `rake console`.
+
+require_relative 'config/environment.rb'
+require 'sinatra/activerecord/rake'
+
+desc 'loads console'
+namespace :db do
+    task :console do
+        Pry.start
+    end
+end
+
+
+desc 'says happy message'
+task :happy do
+    puts "You're amazing!"
+end
