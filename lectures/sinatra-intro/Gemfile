@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+
+gem 'sinatra' # if you look at "Sinatra" in the Gemfile.lock, you will see that it has the Rack gem as a dependency
+gem 'activerecord', '5.2'
+gem 'rake'
+gem 'pry'
