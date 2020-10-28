@@ -1,0 +1,11 @@
+require "sinatra/activerecord/rake"
+
+desc 'tests rake'
+task :my_task do
+    puts 'this is a task'
+end
+
+desc 'starts pry console'
+task :console do
+    Pry.start
+end

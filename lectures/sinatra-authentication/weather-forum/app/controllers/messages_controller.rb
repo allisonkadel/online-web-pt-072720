@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
 
     # New
     get '/messages/new' do
-        erb :'messages/new' # for thursday: why are we getting a path error when we try to render this view?
+        erb :'messages/new'
     end
 
     # Create
@@ -14,6 +14,7 @@ class MessagesController < ApplicationController
 
     # Index
     get '/messages' do
+        @user = User.find(session[:id]) # for thursday: why isn't our :id key persisting in the session hash?
         @messages = Message.all
         erb :'messages/index'
     end
