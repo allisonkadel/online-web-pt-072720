@@ -1,16 +1,11 @@
-<<<<<<< HEAD
 class MessagesController < ApplicationController
 
     # New
-=======
-class MessagesController < Sinatra::Base
-
->>>>>>> 3a14f049b22fbae521e08c96b754fefa45fa3067
     get '/messages/new' do
-        erb :'messages/new' # for thursday: why are we getting a path error when we try to render this view?
+        erb :'messages/new' 
     end
 
-<<<<<<< HEAD
+
     # Create
     post '/messages' do
         Message.create(params)
@@ -24,6 +19,4 @@ class MessagesController < Sinatra::Base
         erb :'messages/index'
     end
 
-=======
->>>>>>> 3a14f049b22fbae521e08c96b754fefa45fa3067
 end
