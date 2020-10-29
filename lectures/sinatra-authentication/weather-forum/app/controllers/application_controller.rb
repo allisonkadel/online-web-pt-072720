@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
     enable :sessions
-    set :session_secret, SecureRandom.hex(64) # generate a random, 64-byte hexadecimal string (Sinatra docs recommend at least 64 bytes in length) to "sign" (authenticate) the session data in the cookie that is sent between client (browser) and server
+    set :session_secret, ENV["SESSION_SECRET"] # generate a random, 64-byte hexadecimal string (Sinatra docs recommend at least 64 bytes in length) to "sign" (authenticate) the session data in the cookie that is sent between client (browser) and server
   end
 
   get "/" do

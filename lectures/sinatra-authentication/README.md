@@ -10,7 +10,7 @@
 ### How do we transfer state across requests in Sinatra when we need to?
 * session
 * ruby hash that stores some info about the current browsing session, like a way to identifier the user, maybe shopping cart contents?
-* essentially server-side versions of browser cookie
+* essentially server-side version of browser cookie
 * help us verify the authenticity of users across requests
 
 ### How do we use a session to log a user in?
