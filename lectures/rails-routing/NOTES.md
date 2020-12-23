@@ -1,3 +1,5 @@
+## Deliverables
+
 * when i visit `/lists/new`, i should see a form to create a new list and associate new items
 * when i visit `/items/new`, i should see a form to create a new item and associate it to an existing list
 * when i visit `/items/:id`, i should see attributes for a particular item
