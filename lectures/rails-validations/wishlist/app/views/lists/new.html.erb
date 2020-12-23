@@ -1,0 +1,16 @@
+<h1>Create a new list and add some items</h1>
+<%= form_for @list do |list_f| %>
+    <%= list_f.label :name, "List Name" %>
+    <%= list_f.text_field :name %>
+    <ul>
+        <%= list_f.fields_for :items do |items_f| %>
+        <li>
+            <%= items_f.label "Item Name" %>
+            <%= items_f.text_field :name %>
+            <%= items_f.label "Item Priority" %>
+            <%= items_f.range_field :priority %>
+        </li>
+        <% end %>
+    </ul>
+    <%= list_f.submit %>
+<% end %>
