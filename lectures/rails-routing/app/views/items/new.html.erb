@@ -1,0 +1,22 @@
+<!-- Plain html form -->
+
+<form action="/items" method="POST">
+    <label value="List">List</label>
+    <select name="item[list_id]">
+        <% @lists.each do |list| %>
+        <option value="<%=list.id%>"><%=list.name%></option>
+        <% end %>
+    </select>
+    <label value="Item Name">Item Name</label>
+    <input type="text" name="item[name]">
+    <input type="submit">
+</form> 
+
+<!-- Rails helper form -->
+<%= form_for(@item) do |f| %>
+    <%= f.label :List %>
+    <%= f.collection_select(:list_id, List.all, :id, :name, prompt: true)%>
+    <%= f.label :Item_name %>
+    <%= f.text_field :name %>
+    <%= f.submit %>
+<% end %>
