@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'sinatra' # if you look at "Sinatra" in the Gemfile.lock, you will see that it has the Rack gem as a dependency
-gem 'activerecord', '5.2'
+gem 'activerecord', '5.2.8.1'
 gem "sinatra-activerecord"
 gem 'sqlite3', '~> 1.3.6'
 gem 'rake'
